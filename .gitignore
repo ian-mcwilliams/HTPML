@@ -1,0 +1,8 @@
+doc/*
+nbproject/*
+nbproject/.DS_Store
+.idea/*
+.idea/.name
+.DS_Store
+.project/*
+.settings/*

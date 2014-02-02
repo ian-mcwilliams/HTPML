@@ -1,12 +1,11 @@
 <?php
 
-    abstract class HtmlElement {
-        var $attributes = array();
-		
-        abstract protected function render($renderSink);
+    require_once 'elementHtml.php';
+
+    abstract class ElementIndexed extends ElementHtml {
+        protected $attributes = array();
         
-        
-        public function HtmlElement($id, $name, $class) {
+        public function ElementIndexed($id, $name, $class) {
             $this->setAttribute('name', $name);
             $this->setAttribute('id', $id);
             $this->setAttribute('class', $class);
@@ -65,15 +64,13 @@
 
         private function getClassValuesAsString() {
             $string = '';
-            $i = 0;
             foreach ($this->attributes['class'] as $key => $value) {
                 if ($value != '') {
                     $string.=$value;
                 }
-                if ($i < count($this->attributes['class'])) {
+                if ($key != end($this->attributes['class'])) {
                     $string.=' ';
                 }
-                $i++;
             }
             return $string;
         }
