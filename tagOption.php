@@ -12,6 +12,14 @@
         public function setText($text) {
             $this->text = $text;
         }
+        
+        public function setValue($value) {
+            parent::setAttribute("value", $value);
+        }
+        
+        public function setSelected() {
+            parent::setAttribute("value", "selected");
+        }
 
         public function render($sink) {
             $sink->addToBuffer('<option'.parent::getAttributesAsString().'>'.$this->text.'</option>'."\n");

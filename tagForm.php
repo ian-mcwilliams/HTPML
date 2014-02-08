@@ -7,6 +7,18 @@
         public function TagForm($id, $name, $cssClass) {
             parent::__construct($id, $name, $cssClass);
         }
+        
+        public function setOnSubmit($onSubmit) {
+            parent::setAttribute("onSubmit", $onSubmit);
+        }
+        
+        public function setAction($action) {
+            parent::setAttribute("action", $action);
+        }
+        
+        public function setMethod($method) {
+            parent::setAttribute("method", $method);
+        }
 
         public function render($sink) {
             parent::renderAll($sink, 'form');

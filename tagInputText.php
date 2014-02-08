@@ -7,17 +7,33 @@
         public function TagInputText($id, $name, $cssClass) {
             parent::__construct($id, $name, $cssClass, "text");
         }
+        
+        public function setValue($value) {
+            parent::setAttribute("value", $value);
+        }
 
-        public function setMaxlength($max) {
-            parent::setAttribute("maxlength", $max);
+        public function setMaxlength($maxlength) {
+            parent::setAttribute("maxlength", $maxlength);
         }
 
         public function setMax($max) {
             parent::setAttribute("max", $max);
         }
 
-        public function setPlaceholder($pH) {
-            parent::setAttribute("placeholder", $pH);
+        public function setMin($min) {
+            parent::setAttribute("min", $min);
+        }
+        
+        public function setOnBlur($command) {
+            parent::setAttribute("onBlur", $command);
+        }
+        
+        public function setSize($size) {
+            parent::setAttribute("size", $size);
+        }
+
+        public function setPlaceholder($placeholder) {
+            parent::setAttribute("placeholder", $placeholder);
         }
 
 

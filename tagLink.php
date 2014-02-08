@@ -10,7 +10,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<link rel="stylesheet" type="text/css" href=">'.$this->href.' />'."\n");
+            $sink->addToBuffer('<link rel="stylesheet" type="text/css" href="'.$this->href.'" />'."\n");
         }
 
 

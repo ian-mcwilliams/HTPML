@@ -7,6 +7,18 @@
         public function TagInputPassword($id, $name, $cssClass) {
             parent::__construct($id, $name, $cssClass, "password");
         }
+        
+        public function setValue($value) {
+            parent::setAttribute("value", $value);
+        }
+        
+        public function setOnBlur($command) {
+            parent::setAttribute("onBlur", $command);
+        }
+        
+        public function setMaxlength($maxlength) {
+            parent::setAttribute("maxlength", $maxlength);
+        }
 
 
     }
