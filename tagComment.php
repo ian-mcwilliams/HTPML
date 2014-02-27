@@ -5,12 +5,16 @@
     class TagComment extends ElementHtml {
         private $comment;
 
-        public function setTagComment($comment) {
+        public function TagComment($comment='') {
+            $this->setComment($comment);
+        }
+
+        public function setComment($comment) {
             $this->comment = $comment;
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<!-- '.$this->comment.' >'."\n");
+            $sink->addToBuffer('<!-- '.$this->comment.' -->'."\n");
         }
 
 
