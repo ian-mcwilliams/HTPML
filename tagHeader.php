@@ -2,7 +2,7 @@
 
     require_once 'elementIndexed.php';
 
-    abstract class TagHeader extends ElementIndexed {
+    class TagHeader extends ElementIndexed {
         private $number;
         private $text;
 
@@ -19,7 +19,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<h'.$this->number.'>'.$this->text.'</'.$this->number.'>'."\n");
+            $sink->addToBuffer('<h'.$this->number.parent::getAttributesAsString().'>'.$this->text.'</h'.$this->number.'>'."\n");
         }
         
         

@@ -5,6 +5,10 @@
     class TagTitle extends ElementHtml {
         private $text;
         
+        public function TagTitle($text) {
+            $this->setText($text);
+        }
+        
         public function setText($text) {
             $this->text = $text;
         }

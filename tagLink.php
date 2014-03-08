@@ -1,16 +1,15 @@
 <?php
 	
-    require_once 'elementHtml.php';
+    require_once 'elementIndexed.php';
 
-    class TagLink extends ElementHtml {
-        private $href;
+    class TagLink extends ElementIndexed {
         
         public function setSource($href) {
-            $this->href = $href;
+            parent::setAttribute("href", $href);
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<link rel="stylesheet" type="text/css" href="'.$this->href.'" />'."\n");
+            $sink->addToBuffer('<link rel="stylesheet" type="text/css"'.parent::getAttributesAsString().' />'."\n");
         }
 
 

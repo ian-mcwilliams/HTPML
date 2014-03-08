@@ -1,6 +1,7 @@
 <?php
 
 
+    require_once 'elementText.php';
     require_once 'renderSink.php';
     require_once 'tagAnchor.php';
     require_once 'tagBody.php';
@@ -27,6 +28,8 @@
     require_once 'tagOption.php';
     require_once 'tagParagraph.php';
     require_once 'tagSelect.php';
+    require_once 'tagScript.php';
+    require_once 'tagScriptSourced.php';
     require_once 'tagTable.php';
     require_once 'tagTableData.php';
     require_once 'tagTableHeader.php';

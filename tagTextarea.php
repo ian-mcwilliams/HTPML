@@ -37,7 +37,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<textarea rows='.$this->rows.' cols='.$this->cols.' '.parent::getAttributesAsString().' />'."\n");
+            $sink->addToBuffer('<textarea rows='.$this->rows.' cols='.$this->cols.' '.parent::getAttributesAsString().'></textarea>'."\n");
         }
 
 

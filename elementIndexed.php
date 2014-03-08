@@ -5,17 +5,19 @@
     abstract class ElementIndexed extends ElementHtml {
         protected $attributes = array();
         
-        public function ElementIndexed($id, $name, $class) {
+        public function ElementIndexed($id=FALSE, $name=FALSE, $class=FALSE) {
             $this->setAttribute('name', $name);
             $this->setAttribute('id', $id);
             $this->setAttribute('class', $class);
         }
 		
         public function setAttribute($key, $value) {
-            if ($key == 'class') {
-                $this->attributes[$key] = array($value);
-            } else {
-                $this->attributes[$key] = $value;
+            if ($value !== FALSE) {
+                if ($key == 'class') {
+                    $this->attributes[$key] = array($value);
+                } else {
+                    $this->attributes[$key] = $value;
+                }
             }
 	}
 
@@ -34,6 +36,18 @@
 		
         protected function getAttribute($key) {
             return $this->attributes[$key];
+        }
+        
+        public function setName($name) {
+            $this->setAttribute('name', $name);
+        }
+        
+        public function setId($id) {
+            $this->setAttribute('id', $id);
+        }
+        
+        public function setCssClass($cssClass) {
+            $this->setAttribute('cssClass', $cssClass);
         }
 
         public function getName() {
