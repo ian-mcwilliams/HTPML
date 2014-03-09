@@ -4,6 +4,10 @@
 
     class TagLink extends ElementIndexed {
         
+        public function TagLink($id=FALSE, $name=FALSE, $cssClass=FALSE) {
+            parent::__construct($id, $name, $cssClass);
+        }
+        
         public function setSource($href) {
             parent::setAttribute("href", $href);
         }

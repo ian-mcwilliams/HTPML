@@ -7,10 +7,6 @@
         public function TagInputText($id, $name, $cssClass) {
             parent::__construct($id, $name, $cssClass, "text");
         }
-        
-        public function setValue($value) {
-            parent::setAttribute("value", $value);
-        }
 
         public function setMaxlength($maxlength) {
             parent::setAttribute("maxlength", $maxlength);

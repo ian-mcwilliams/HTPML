@@ -1,25 +1,25 @@
 <?php
 
-    require_once 'elementIndexed.php';
+    require_once 'elementWrapping.php';
 
-    class TagHeader extends ElementIndexed {
+    class TagHeader extends ElementWrapping {
         private $number;
-        private $text;
 
-        public function TagHeader($id, $name, $cssClass) {
+        public function TagHeader($id, $name, $cssClass, $number=1) {
             parent::__construct($id, $name, $cssClass);
+            $this->number = $number;
         }
         
         public function setNumber($number) {
             $this->number = $number;
         }
         
-        public function setText($text) {
-            $this->text = $text;
+        public function getNumber() {
+            return $this->number;
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<h'.$this->number.parent::getAttributesAsString().'>'.$this->text.'</h'.$this->number.'>'."\n");
+            parent::renderAll($sink, 'h'.$this->number);
         }
         
         

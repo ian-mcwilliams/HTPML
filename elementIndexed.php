@@ -20,15 +20,19 @@
                 }
             }
 	}
+        
+        public function unsetAttribute($key) {
+            unset($this->attributes[$key]);
+        }
 
         public function addAttributeToClass($value) {
             array_push($this->attributes['class'], $value);
         }
 
-        public function removeAttributeFromClass($valueToRemove) {
+        public function unsetAttributeFromClass($valueToUnset) {
             foreach ($this->attributes['class'] as $key => $value) {
-                if ($value == $valueToRemove) {
-                    $this->attributes['class'][$key] = ''; //TODO: look up how to remove array elements
+                if ($value == $valueToUnset) {
+                    unset($this->attributes['class'][$key]);
                     break;
                 }
             }
@@ -51,15 +55,15 @@
         }
 
         public function getName() {
-            return $name;
+            return $this->getAttribute('name');
         }
 
         public function getId() {
-            return $id;
+            return $this->getAttribute('id');
         }
 
         public function getCssClass() {
-            return $class;
+            return $this->getAttribute('class');
         }
 
         protected function getAttributesAsString() {

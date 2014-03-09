@@ -19,27 +19,31 @@
     
     $tagLabel = new TagLabel('testlabelid', 'testlabelname', 'testlabelcssclass');
     $tagLabel->setFor('testinputpasswordid');
-    $tagLabel->setText('password label:');
+    $tagLabelText = new ElementText('password label:');
+    $tagLabel->addChild($tagLabelText);
     
     $tagInputPassword = new TagInputPassword('testinputpasswordid', 'testinputpasswordname', 'testinputpasswordcssclass');
     $tagInputCheckbox = new TagInputCheckbox('testinputcheckboxid', 'testinputcheckboxname', 'testinputcheckboxcssclass');
     $tagInputDate = new TagInputDate('testinputdateid', 'testinputdatename', 'testinputdatecssclass');
     $tagInputRadio = new TagInputRadio('testinputradioid', 'testinputradioname', 'testinputradiocssclass');
     $tagInputSubmit = new TagInputSubmit('testinputsubmitid', 'testinputsubmitname', 'testinputsubmitcssclass');
-    $tagTextarea = new TagTextarea('testtextareaid', 'testtextareaname', '$testtextareacssclass');
+    $tagTextarea = new TagTextarea('testtextareaid', 'testtextareaname', 'testtextareacssclass');
     $tagTextarea->setRows(10);
     $tagTextarea->setCols(40);
     $tagTextarea->setPlaceholder('testtextareaplaceholdertext');
     
     $tagAnchor = new TagAnchor('anchortestid', 'anchortestname', 'anchortestcssclass');
     $tagAnchor->setHref('http://www.w3schools.com');
-    $tagAnchor->setText('Go to School');
+    $tagAnchorText = new ElementText('Go to School');
+    $tagAnchor->addChild($tagAnchorText);
     
     $tagParagraph = new TagParagraph('paragraphtestid', 'paragraphtestname', 'paragraphtestcssclass');
-    $tagParagraph->setText('A test paragraph with test bold text');
+    $tagParagraphText = new ElementText('A test paragraph with test bold text');
+    $tagParagraph->addChild($tagParagraphText);
     
     $tagBold = new TagBold;
-    $tagBold->setText('Some bold test text');
+    $tagBoldText = new ElementText('Some bold test text');
+    $tagBold->addChild($tagBoldText);
     
     $tagForm = new TagForm('formtestid', 'formtestname', 'formtestcssclass');
     $tagForm->addChild($tagInputText);
@@ -53,24 +57,24 @@
     
     $tagComment = new TagComment('testcomment');
     
-    $tagH1 = new TagHeader('testh1id', 'testh1name', 'testh1cssclass');
-    $tagH1->setNumber(1);
-    $tagH1->setText('test H1 text');
-    $tagH2 = new TagHeader('testh2id', 'testh2name', 'testh2cssclass');
-    $tagH2->setNumber(2);
-    $tagH2->setText('test H2 text');
-    $tagH3 = new TagHeader('testh3id', 'testh3name', 'testh3cssclass');
-    $tagH3->setNumber(3);
-    $tagH3->setText('test H3 text');
-    $tagH4 = new TagHeader('testh4id', 'testh4name', 'testh4cssclass');
-    $tagH4->setNumber(4);
-    $tagH4->setText('test H4 text');
-    $tagH5 = new TagHeader('testh5id', 'testh5name', 'testh5cssclass');
-    $tagH5->setNumber(5);
-    $tagH5->setText('test H5 text');
-    $tagH6 = new TagHeader('testh6id', 'testh6name', 'testh6cssclass');
-    $tagH6->setNumber(6);
-    $tagH6->setText('test H6 text');
+    $tagH1 = new TagHeader('testh1id', 'testh1name', 'testh1cssclass', 1);
+    $tagH1Text = new ElementText('test H1 text');
+    $tagH1->addChild($tagH1Text);
+    $tagH2 = new TagHeader('testh2id', 'testh2name', 'testh2cssclass', 2);
+    $tagH2Text = new ElementText('test H2 text');
+    $tagH2->addChild($tagH2Text);
+    $tagH3 = new TagHeader('testh3id', 'testh3name', 'testh3cssclass', 3);
+    $tagH3Text = new ElementText('test H3 text');
+    $tagH3->addChild($tagH3Text);
+    $tagH4 = new TagHeader('testh4id', 'testh4name', 'testh4cssclass', 4);
+    $tagH4Text = new ElementText('test H4 text');
+    $tagH4->addChild($tagH4Text);
+    $tagH5 = new TagHeader('testh5id', 'testh5name', 'testh5cssclass', 5);
+    $tagH5Text = new ElementText('test H5 text');
+    $tagH5->addChild($tagH5Text);
+    $tagH6 = new TagHeader('testh6id', 'testh6name', 'testh6cssclass', 6);
+    $tagH6Text = new ElementText('test H6 text');
+    $tagH6->addChild($tagH6Text);
     
     $tagImage = new TagImage('testimageid', 'testimagename', 'testimagecssclass');
     $tagImage->setSource('http://www.boroguide.co.uk/images/borochat2.jpg');
@@ -138,7 +142,10 @@
     $tagTableRow3->addChild($tagTableRow3Data2);
     $tagTable->addChild($tagTableRow3);
     
-    $tagTitle = new TagTitle('testtitletext');
+    $tagTitle = new TagTitle();
+    $tagTitleText = new ElementText('testtitletext');
+    $tagTitle->addChild($tagTitleText);
+    
     $tagHead->addChild($tagTitle);
     
     
@@ -148,7 +155,7 @@
     $tagDiv = new TagDiv('divtestid', 'divtestname', 'divtestcssclass');
     $tagDiv->addAttributeToClass('testClass1');
     $tagDiv->addAttributeToClass('testClass2');
-    $tagDiv->removeAttributeFromClass('testClass2');
+    $tagDiv->unsetAttributeFromClass('testClass2');
 
     $tagDiv->addChild($tagInputText);
     $tagDiv->addChild($tagBreak);
