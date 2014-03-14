@@ -4,7 +4,7 @@
 
     class TagTableHeader extends ElementWrapping {
 
-        public function TagTableHeader($id, $name, $cssClass) {
+        public function TagTableHeader($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
         

@@ -5,7 +5,7 @@
     class TagHeader extends ElementWrapping {
         private $number;
 
-        public function TagHeader($id, $name, $cssClass, $number=1) {
+        public function TagHeader($id=FALSE, $name=FALSE, $cssClass=FALSE, $number=1) {
             parent::__construct($id, $name, $cssClass);
             $this->number = $number;
         }

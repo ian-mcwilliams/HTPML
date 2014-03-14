@@ -4,7 +4,7 @@
 
     class TagAnchor extends ElementWrapping {
 
-        public function TagAnchor($id, $name, $cssClass) {
+        public function TagAnchor($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
         

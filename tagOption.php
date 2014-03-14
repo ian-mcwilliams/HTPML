@@ -4,7 +4,7 @@
 
     class TagOption extends ElementWrapping {
 
-        public function TagOption($id, $name, $cssClass) {
+        public function TagOption($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
         

@@ -5,7 +5,7 @@
     abstract class ElementIndexed extends ElementHtml {
         protected $attributes = array();
         
-        public function ElementIndexed($id=FALSE, $name=FALSE, $class=FALSE) {
+        public function ElementIndexed($id, $name, $class) {
             $this->setAttribute('name', $name);
             $this->setAttribute('id', $id);
             $this->setAttribute('class', $class);

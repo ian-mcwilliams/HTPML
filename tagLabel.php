@@ -4,7 +4,7 @@
 
     class TagLabel extends ElementWrapping {
 
-        public function TagLabel($id, $name, $cssClass) {
+        public function TagLabel($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
         

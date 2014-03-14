@@ -4,7 +4,7 @@
 
     class TagImage extends ElementIndexed {
 
-        public function TagImage($id, $name, $cssClass) {
+        public function TagImage($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
         

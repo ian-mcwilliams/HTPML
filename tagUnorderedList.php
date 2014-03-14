@@ -4,7 +4,7 @@
 
     class TagUnorderedList extends ElementWrapping {
         
-        public function TagUnorderedList($id, $name, $cssClass) {
+        public function TagUnorderedList($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

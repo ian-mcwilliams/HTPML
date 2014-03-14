@@ -4,7 +4,7 @@
 
     class TagScript extends ElementWrapping {
 
-        public function TagScript($id, $name, $cssClass) {
+        public function TagScript($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

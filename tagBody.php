@@ -4,7 +4,7 @@
 
     class TagBody extends ElementWrapping {
 
-        public function TagBody($id, $name, $cssClass) {
+        public function TagBody($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

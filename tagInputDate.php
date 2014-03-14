@@ -4,7 +4,7 @@
 
     class TagInputDate extends TagInput {
         
-        public function TagInputDate($id, $name, $cssClass) {
+        public function TagInputDate($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass, "date");
         }
 

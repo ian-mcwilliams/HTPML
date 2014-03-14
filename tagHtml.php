@@ -4,7 +4,7 @@
 
     class TagHtml extends ElementWrapping {
         
-        public function TagHtml($id, $name, $cssClass) {
+        public function TagHtml($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

@@ -4,7 +4,7 @@
 
     class TagDiv extends ElementWrapping {
         
-        public function TagDiv($id, $name, $cssClass) {
+        public function TagDiv($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

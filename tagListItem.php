@@ -4,7 +4,7 @@
 
     class TagListItem extends ElementWrapping {
         
-        public function TagListItem($id, $name, $cssClass) {
+        public function TagListItem($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

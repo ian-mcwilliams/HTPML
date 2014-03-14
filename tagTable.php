@@ -4,7 +4,7 @@
 
     class TagTable extends ElementWrapping {
         
-        public function TagTable($id, $name, $cssClass) {
+        public function TagTable($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

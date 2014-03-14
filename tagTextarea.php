@@ -6,7 +6,7 @@
         private $rows;
         private $cols;
 
-        public function TagTextarea($id, $name, $cssClass, $rows=1, $cols=1) {
+        public function TagTextarea($id=FALSE, $name=FALSE, $cssClass=FALSE, $rows=1, $cols=1) {
             parent::__construct($id, $name, $cssClass);
             $this->setRows($rows);
             $this->setCols($cols);

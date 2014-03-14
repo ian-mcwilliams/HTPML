@@ -4,7 +4,7 @@
 
     class TagHead extends ElementWrapping {
         
-        public function TagHead($id, $name, $cssClass) {
+        public function TagHead($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

@@ -4,12 +4,16 @@
 
     class TagSelect extends ElementWrapping {
 
-        public function TagSelect($id, $name, $cssClass) {
+        public function TagSelect($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
         
-        public function setValue($value) {
-            parent::setAttribute("multiple", "multiple");
+        public function setMultiple() {
+            parent::setAttribute('multiple', 'multiple');
+        }
+        
+        public function unsetMultiple() {
+            parent::unsetAttribute('multiple');
         }
 
         public function render($sink) {
