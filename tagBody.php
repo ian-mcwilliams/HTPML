@@ -1,6 +1,4 @@
 <?php
-	
-    require_once 'elementIndexed.php';
 
     class TagBody extends ElementIndexed {
 

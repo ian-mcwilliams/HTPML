@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagForm extends ElementIndexed {
         
         public function TagForm($id=FALSE, $name=FALSE, $cssClass=FALSE) {

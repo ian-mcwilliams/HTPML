@@ -1,6 +1,8 @@
 <?php
 
 
+    require_once 'elementHtml.php';
+    require_once 'elementIndexed.php';
     require_once 'elementText.php';
     require_once 'renderSink.php';
     require_once 'tagAnchor.php';
@@ -40,13 +42,14 @@
     
     class scriptHtml {
         private $sink;
+        private $childElements = array();
 
         public function scriptHtml() {
             $this->sink = new RenderSink();
         }
 
         public function render() {
-            $this->sink->getBuffer();
+            echo $this->sink->getBuffer();
         }
 
 

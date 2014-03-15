@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagListItem extends ElementIndexed {
         
         public function TagListItem($id=FALSE, $name=FALSE, $cssClass=FALSE) {

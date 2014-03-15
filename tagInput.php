@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     abstract class TagInput extends ElementIndexed {
 
         public function TagInput($id, $name, $cssClass, $type) {

@@ -1,6 +1,4 @@
-<?php 
-	
-    require_once 'tagInput.php';
+<?php
 
     class TagInputRadio extends TagInput {
         

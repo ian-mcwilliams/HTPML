@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagUnorderedList extends ElementIndexed {
         
         public function TagUnorderedList($id=FALSE, $name=FALSE, $cssClass=FALSE) {

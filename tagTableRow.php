@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagTableRow extends ElementIndexed {
         
         public function TagTableRow($id=FALSE, $name=FALSE, $cssClass=FALSE) {

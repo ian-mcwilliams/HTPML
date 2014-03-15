@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagHead extends ElementIndexed {
         
         public function TagHead($id=FALSE, $name=FALSE, $cssClass=FALSE) {

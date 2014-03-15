@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementHtml.php';
-
     abstract class ElementIndexed extends ElementHtml {
         private $childElements = array();
         protected $attributes = array();

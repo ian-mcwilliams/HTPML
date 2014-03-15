@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagHeader extends ElementIndexed {
         private $number;
 

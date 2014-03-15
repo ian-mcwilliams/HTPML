@@ -1,6 +1,4 @@
 <?php
-	
-    require_once 'elementIndexed.php';
 
     class TagLink extends ElementIndexed {
         

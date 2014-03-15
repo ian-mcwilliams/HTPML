@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagDiv extends ElementIndexed {
         
         public function TagDiv($id=FALSE, $name=FALSE, $cssClass=FALSE) {

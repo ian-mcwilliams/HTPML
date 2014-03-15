@@ -1,7 +1,5 @@
 <?php
 
-require 'elementHtml.php';
-
 class ElementText extends ElementHtml {
     private $children = array();
 

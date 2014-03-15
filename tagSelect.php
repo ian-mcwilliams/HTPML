@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagSelect extends ElementIndexed {
 
         public function TagSelect($id=FALSE, $name=FALSE, $cssClass=FALSE) {

@@ -1,6 +1,4 @@
 <?php
-	
-    require_once 'elementIndexed.php';
 
     class TagImage extends ElementIndexed {
 

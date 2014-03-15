@@ -1,6 +1,4 @@
 <?php
-	
-    require_once 'elementHtml.php';
 
     class TagBreak extends ElementHtml {
 

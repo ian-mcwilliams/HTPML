@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'elementIndexed.php';
-
     class TagTableData extends ElementIndexed {
 
         public function TagTableData($id=FALSE, $name=FALSE, $cssClass=FALSE) {
