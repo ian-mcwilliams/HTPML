@@ -13,7 +13,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<script'.parent::getAttributesAsString().'></script>'."\n");
+            parent::renderAll($sink, 'script');
         }
 
 

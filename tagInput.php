@@ -18,7 +18,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<input'.parent::getAttributesAsString().' />'."\n");
+            parent::renderAll($sink, 'input', TRUE);
         }
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-    require_once 'elementWrapping.php';
+    require_once 'elementIndexed.php';
 
-    class TagUnorderedList extends ElementWrapping {
+    class TagUnorderedList extends ElementIndexed {
         
         public function TagUnorderedList($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);

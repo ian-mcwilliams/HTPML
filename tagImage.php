@@ -13,7 +13,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<img'.parent::getAttributesAsString().' />'."\n");
+            parent::renderAll($sink, 'img', TRUE);
         }
 
 

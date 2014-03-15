@@ -6,6 +6,8 @@
         
         public function TagLink($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
+            parent::setAttribute('rel', 'stylesheet');
+            parent::setAttribute('type', 'text/css');
         }
         
         public function setSource($href) {
@@ -13,7 +15,7 @@
         }
 
         public function render($sink) {
-            $sink->addToBuffer('<link rel="stylesheet" type="text/css"'.parent::getAttributesAsString().' />'."\n");
+            parent::renderAll($sink, 'link', TRUE);
         }
 
 

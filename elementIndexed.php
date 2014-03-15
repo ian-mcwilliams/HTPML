@@ -3,6 +3,7 @@
     require_once 'elementHtml.php';
 
     abstract class ElementIndexed extends ElementHtml {
+        private $childElements = array();
         protected $attributes = array();
         
         public function ElementIndexed($id, $name, $class) {
@@ -91,6 +92,30 @@
                 }
             }
             return $string;
+        }
+        
+        public function addChild($element) {
+            array_push($this->childElements, $element);
+        }
+
+        protected function getChildElements() {
+            return $this->childElements;
+        }
+
+        public function renderAll($sink, $tag, $single=FALSE) {
+            switch ($single) {
+                case TRUE:
+                    $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().' />'."\n");
+                    break;
+                case FALSE:
+                    $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().'>'."\n");
+                    foreach ($this->getChildElements() as $childElement) {
+                        $childElement->render($sink);
+                    }
+                    $sink->addToBuffer('</'.$tag.'>'."\n");    
+                    break;
+            }
+
         }
 	
     }

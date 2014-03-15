@@ -1,8 +1,8 @@
 <?php
 
-    require_once 'elementWrapping.php';
+    require_once 'elementIndexed.php';
 
-    class TagHtml extends ElementWrapping {
+    class TagHtml extends ElementIndexed {
         
         public function TagHtml($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);

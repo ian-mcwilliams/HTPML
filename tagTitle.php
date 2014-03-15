@@ -1,10 +1,10 @@
 <?php
 	
-    require_once 'elementWrapping.php';
+    require_once 'elementIndexed.php';
 
-    class TagTitle extends ElementWrapping {
+    class TagTitle extends ElementIndexed {
         
-        public function TagTableRow($id=FALSE, $name=FALSE, $cssClass=FALSE) {
+        public function TagTitle($id=FALSE, $name=FALSE, $cssClass=FALSE) {
             parent::__construct($id, $name, $cssClass);
         }
 

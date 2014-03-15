@@ -1,8 +1,8 @@
 <?php
 
-    require_once 'elementWrapping.php';
+    require_once 'elementIndexed.php';
 
-    class TagHeader extends ElementWrapping {
+    class TagHeader extends ElementIndexed {
         private $number;
 
         public function TagHeader($id=FALSE, $name=FALSE, $cssClass=FALSE, $number=1) {
