@@ -2,8 +2,9 @@
 
     class TagInputRadio extends TagInput {
         
-        public function TagInputRadio($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass, "radio");
+        public function TagInputRadio($attrs) {
+            $attrs['type'] = 'radio';
+            parent::__construct($attrs);
         }
 
 

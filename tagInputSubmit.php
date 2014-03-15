@@ -2,8 +2,9 @@
 
     class TagInputSubmit extends TagInput {
         
-        public function TagInputSubmit($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass, "submit");
+        public function TagInputSubmit($attrs) {
+            $attrs['type'] = 'submit';
+            parent::__construct($attrs);
         }
 
 

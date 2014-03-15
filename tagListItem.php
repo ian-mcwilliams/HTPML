@@ -2,8 +2,8 @@
 
     class TagListItem extends ElementIndexed {
         
-        public function TagListItem($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagListItem($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

@@ -2,8 +2,9 @@
 
     class TagInputText extends TagInput {
         
-        public function TagInputText($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass, "text");
+        public function TagInputText($attrs) {
+            $attrs['type'] = 'text';
+            parent::__construct($attrs);
         }
 
         public function setMaxlength($maxlength) {

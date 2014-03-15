@@ -2,8 +2,8 @@
 
     class TagOption extends ElementIndexed {
 
-        public function TagOption($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagOption($attrs) {
+            parent::__construct($attrs);
         }
         
         public function setValue($value) {

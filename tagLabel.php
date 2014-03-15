@@ -2,8 +2,8 @@
 
     class TagLabel extends ElementIndexed {
 
-        public function TagLabel($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagLabel($attrs) {
+            parent::__construct($attrs);
         }
         
         public function setFor($id) {

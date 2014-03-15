@@ -2,8 +2,8 @@
 
     class TagParagraph extends ElementIndexed {
 
-        public function TagParagraph($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagParagraph($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

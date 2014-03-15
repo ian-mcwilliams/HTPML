@@ -2,8 +2,8 @@
 
     class TagUnorderedList extends ElementIndexed {
         
-        public function TagUnorderedList($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagUnorderedList($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

@@ -2,8 +2,8 @@
 
     class TagTitle extends ElementIndexed {
         
-        public function TagTitle($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagTitle($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

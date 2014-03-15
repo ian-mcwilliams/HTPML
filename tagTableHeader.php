@@ -2,8 +2,8 @@
 
     class TagTableHeader extends ElementIndexed {
 
-        public function TagTableHeader($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagTableHeader($attrs) {
+            parent::__construct($attrs);
         }
         
         public function setColspan($colspan) {

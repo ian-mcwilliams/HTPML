@@ -2,9 +2,8 @@
 
     abstract class TagInput extends ElementIndexed {
 
-        public function TagInput($id, $name, $cssClass, $type) {
-            parent::__construct($id, $name, $cssClass);
-            parent::setAttribute("type", $type);
+        public function TagInput($attrs) {
+            parent::__construct($attrs);
         }
 
         public function getValue() {

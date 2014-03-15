@@ -2,8 +2,8 @@
 
     class TagScript extends ElementIndexed {
 
-        public function TagScript($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagScript($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

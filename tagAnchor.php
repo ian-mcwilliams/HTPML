@@ -2,8 +2,8 @@
 
     class TagAnchor extends ElementIndexed {
 
-        public function TagAnchor($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagAnchor($attrs) {
+            parent::__construct($attrs);
         }
         
         public function setHref($href) {

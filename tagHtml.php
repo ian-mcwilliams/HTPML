@@ -2,8 +2,8 @@
 
     class TagHtml extends ElementIndexed {
         
-        public function TagHtml($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagHtml($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

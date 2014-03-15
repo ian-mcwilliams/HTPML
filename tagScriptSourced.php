@@ -2,8 +2,8 @@
 
     class TagScriptSourced extends ElementIndexed {
 
-        public function TagScriptSourced($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagScriptSourced($attrs) {
+            parent::__construct($attrs);
         }
         
         public function setSource($source) {

@@ -2,8 +2,8 @@
 
     class TagBold extends ElementIndexed {
         
-        public function TagBold($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagBold($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

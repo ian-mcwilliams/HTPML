@@ -4,8 +4,8 @@
         private $rows;
         private $cols;
 
-        public function TagTextarea($id=FALSE, $name=FALSE, $cssClass=FALSE, $rows=1, $cols=1) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagTextarea($attrs, $rows=1, $cols=1) {
+            parent::__construct($attrs);
             $this->setRows($rows);
             $this->setCols($cols);
         }

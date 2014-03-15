@@ -3,8 +3,8 @@
     class TagHeader extends ElementIndexed {
         private $number;
 
-        public function TagHeader($id=FALSE, $name=FALSE, $cssClass=FALSE, $number=1) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagHeader($attrs, $number=1) {
+            parent::__construct($attrs);
             $this->number = $number;
         }
         

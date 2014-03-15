@@ -2,8 +2,8 @@
 
     class TagSelect extends ElementIndexed {
 
-        public function TagSelect($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagSelect($attrs) {
+            parent::__construct($attrs);
         }
         
         public function setMultiple() {

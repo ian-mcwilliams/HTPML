@@ -2,8 +2,8 @@
 
     class TagBody extends ElementIndexed {
 
-        public function TagBody($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
+        public function TagBody($attrs) {
+            parent::__construct($attrs);
         }
 
         public function render($sink) {

@@ -2,8 +2,9 @@
 
     class TagInputPassword extends TagInput {
         
-        public function TagInputPassword($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass, "password");
+        public function TagInputPassword($attrs) {
+            $attrs['type'] = 'password';
+            parent::__construct($attrs);
         }
         
         public function setOnBlur($command) {

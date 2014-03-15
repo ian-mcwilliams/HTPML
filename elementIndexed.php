@@ -4,10 +4,10 @@
         private $childElements = array();
         protected $attributes = array();
         
-        public function ElementIndexed($id, $name, $class) {
-            $this->setAttribute('name', $name);
-            $this->setAttribute('id', $id);
-            $this->setAttribute('class', $class);
+        public function ElementIndexed($attrs) {
+            foreach ($attrs as $key => $value) {
+                $this->setAttribute($key, $value);
+            }
         }
 		
         public function setAttribute($key, $value) {

@@ -2,10 +2,10 @@
 
     class TagLink extends ElementIndexed {
         
-        public function TagLink($id=FALSE, $name=FALSE, $cssClass=FALSE) {
-            parent::__construct($id, $name, $cssClass);
-            parent::setAttribute('rel', 'stylesheet');
-            parent::setAttribute('type', 'text/css');
+        public function TagLink($attrs) {
+            $attrs['rel'] = 'stylesheet';
+            $attrs['type'] = 'text/css';
+            parent::__construct($attrs);
         }
         
         public function setSource($href) {
