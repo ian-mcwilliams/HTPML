@@ -4,10 +4,10 @@
         private $rows;
         private $cols;
 
-        public function TagTextarea($attrs, $rows=1, $cols=1) {
+        public function TagTextarea($attrs) {
+            $this->setRows(parent::checkAttr($attrs, 'rows') ?: 1);
+            $this->setCols(parent::checkAttr($attrs, 'cols') ?: 1);
             parent::__construct($attrs);
-            $this->setRows($rows);
-            $this->setCols($cols);
         }
         
         public function setValue($value) {

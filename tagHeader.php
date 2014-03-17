@@ -3,9 +3,9 @@
     class TagHeader extends ElementIndexed {
         private $number;
 
-        public function TagHeader($attrs, $number=1) {
+        public function TagHeader($attrs) {
+            $this->setNumber(parent::checkAttr($attrs, 'number') ?: 1);
             parent::__construct($attrs);
-            $this->number = $number;
         }
         
         public function setNumber($number) {

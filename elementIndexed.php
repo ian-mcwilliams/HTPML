@@ -92,8 +92,11 @@
             return $string;
         }
         
-        public function addChild($element) {
-            array_push($this->childElements, $element);
+        public function addChildren($children) {
+            if (!is_array($children)) {
+                $children = array($children);
+            }
+            $this->childElements = array_merge($this->childElements, $children);
         }
 
         protected function getChildElements() {

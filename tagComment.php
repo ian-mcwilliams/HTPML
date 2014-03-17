@@ -3,8 +3,8 @@
     class TagComment extends ElementHtml {
         private $comment;
 
-        public function TagComment($comment='') {
-            $this->setComment($comment);
+        public function TagComment($attrs) {
+            $this->setComment(parent::checkAttr($attrs['comment']) ?: '');
         }
 
         public function setComment($comment) {

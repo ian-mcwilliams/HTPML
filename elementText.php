@@ -3,15 +3,18 @@
 class ElementText extends ElementHtml {
     private $children = array();
 
-    public function ElementText($text) {
-        $this->addChildren($text);
+    public function ElementText($input) {
+        $this->addChildren($input);
     }
     
     public function addChildren($children, $index=-1) {
         if ($index == -1) {
-            array_push($this->children, $children);
+            if (!is_array($children)) {
+                $children = array($children);
+            }
+            $this->children = array_merge($this->children, $children);
         } else {
-            array_splice($this->children, $index, 0, $children);
+            $this->children = array_splice($this->children, $index, 0, $children);
         }
     }
     
