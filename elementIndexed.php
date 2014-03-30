@@ -104,16 +104,21 @@
         }
 
         public function renderAll($sink, $tag, $single=FALSE) {
+            if ($tag != 'textarea') {
+                $nL = "\n";
+            } else {
+                $nL = '';
+            }
             switch ($single) {
                 case TRUE:
-                    $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().' />'."\n");
+                    $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().' />'.$nL);
                     break;
                 case FALSE:
-                    $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().'>'."\n");
+                    $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().'>'.$nL);
                     foreach ($this->getChildElements() as $childElement) {
                         $childElement->render($sink);
                     }
-                    $sink->addToBuffer('</'.$tag.'>'."\n");    
+                    $sink->addToBuffer('</'.$tag.'>'.$nL);
                     break;
             }
 

@@ -25,7 +25,7 @@ class ElementText extends ElementHtml {
     public function render($sink) {
         foreach ($this->children as $child) {
             if (is_string($child)) {
-                $sink->addToBuffer($child."\n");
+                $sink->addToBuffer($child);
             } else {
                 $child->render($sink);
             }
