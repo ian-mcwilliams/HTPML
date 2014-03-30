@@ -24,8 +24,11 @@
             return $this->generateElement($tag, $attrs);
         }
         
-        public function addChild($element) {
-            array_push($this->childElements, $element);
+        public function addChildren($children) {
+            if (!is_array($children)) {
+                $children = array($children);
+            }
+            $this->childElements = array_merge($this->childElements, $children);
         }
         
         public function getChildren() {
@@ -36,11 +39,15 @@
             foreach ($this->childElements as $childElement) {
                 $childElement->render($this->sink);
             }
-            echo $this->sink->getBuffer();
+            return $this->sink->getBuffer();
         }
         
-        public function br() {
+        public function getBr() {
             return $this->createElement('br');
+        }
+        
+        public function addBr($param) {
+            $this->addChild($this->getBr());
         }
         
         private function generateElement($tag, $attrs) {

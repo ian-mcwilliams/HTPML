@@ -23,7 +23,7 @@
     $inputSubmit = $sH->createElement('inputSubmit', array('value'=>'submit'));
     $inputForm = $sH->createElement('form', array('method'=>'get', 'action'=>'#'));
     $inputForm->addChildren(array($inputText, $sH->br(), $inputPassword, $sH->br(), $inputSubmit));
-    $sH->addChild($inputForm);
+    $sH->addChildren($inputForm);
     $sH->render();
     
     
