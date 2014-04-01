@@ -72,7 +72,7 @@
                     return new TagComment($attrs);
                 case 'div':
                     require_once 'tagDiv.php';
-                    return new TagDiv();
+                    return new TagDiv($attrs);
                 case 'doctype':
                     require_once 'tagDoctype.php';
                     return new TagDoctype();
