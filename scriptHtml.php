@@ -17,14 +17,18 @@
         }
         
         public function createChild($tag, $attrs=array()) {
-            $this->addChild($this->createElement($tag, $attrs));
+            $this->addChild($this->create($tag, $attrs));
         }
         
-        public function createElement($tag, $attrs=array()) {
-            return $this->generateElement($tag, $attrs);
+        public function create($tag, $attrs=array(), $children=null) {
+            $element = $this->generateElement($tag, $attrs);
+            if (!is_null($children)) {
+                $element->add($children);
+            }
+            return $element;
         }
         
-        public function addChildren($children) {
+        public function add($children) {
             if (!is_array($children)) {
                 $children = array($children);
             }
@@ -43,7 +47,7 @@
         }
         
         public function getBr() {
-            return $this->createElement('br');
+            return $this->create('br');
         }
         
         public function addBr($param) {
@@ -97,6 +101,9 @@
                 case 'inputDate':
                     require_once 'tagInputDate.php';
                     return new TagInputDate($attrs);
+                case 'inputHidden':
+                    require_once 'tagInputHidden.php';
+                    return new TagInputHidden($attrs);
                 case 'inputPassword':
                     require_once 'tagInputPassword.php';
                     return new TagInputPassword($attrs);

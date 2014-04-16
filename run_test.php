@@ -1,30 +1,37 @@
 <?php
 
-    require 'scriptHtml.php';
-    
-    
-    $sH = new ScriptHtml();
-//    $text = $sH->createElement('text', array('somearraytext'));
-//    $anchor = $sH->createElement('a', array('id' => 'testscriptanchorid', 'href' => '#'));
-//    $anchor->addChild($text);
-//    $sH->addChild($anchor);
-    
-//    $sH->createChild('doctype');
-//    $html = $sH->createElement('html', array('id'=>'testPageHtml', 'name'=>'testPageHtml', 'cssclass'=>'testPage'));
-//    $head = $sH->createElement('head');
-//    $body = $sH->createElement('body');
-//    $html->addChild($head);
-//    $html->addChild($body);
-//    $sH->addChild($html);
+$a_rray = array('a', 'b');
+$b_rray = array('c', 'd');
+$c = array('e');
+
+$z = array_merge($a_rray, $c, $b_rray);
+echo var_dump($z);
+
+//    require 'scriptHtml.php';
+//    
+//    
+//    $sH = new ScriptHtml();
+////    $text = $sH->createElement('text', array('somearraytext'));
+////    $anchor = $sH->createElement('a', array('id' => 'testscriptanchorid', 'href' => '#'));
+////    $anchor->addChild($text);
+////    $sH->addChild($anchor);
+//    
+////    $sH->createChild('doctype');
+////    $html = $sH->createElement('html', array('id'=>'testPageHtml', 'name'=>'testPageHtml', 'cssclass'=>'testPage'));
+////    $head = $sH->createElement('head');
+////    $body = $sH->createElement('body');
+////    $html->addChild($head);
+////    $html->addChild($body);
+////    $sH->addChild($html);
+////    $sH->render();
+//    
+//    $inputText = $sH->create('inputText', array('placeholder'=>'username'));
+//    $inputPassword = $sH->create('inputPassword', array('placeholder'=>'password'));
+//    $inputSubmit = $sH->create('inputSubmit', array('value'=>'submit'));
+//    $inputForm = $sH->create('form', array('method'=>'get', 'action'=>'#'));
+//    $inputForm->add(array($inputText, $sH->br(), $inputPassword, $sH->br(), $inputSubmit));
+//    $sH->add($inputForm);
 //    $sH->render();
-    
-    $inputText = $sH->createElement('inputText', array('placeholder'=>'username'));
-    $inputPassword = $sH->createElement('inputPassword', array('placeholder'=>'password'));
-    $inputSubmit = $sH->createElement('inputSubmit', array('value'=>'submit'));
-    $inputForm = $sH->createElement('form', array('method'=>'get', 'action'=>'#'));
-    $inputForm->addChildren(array($inputText, $sH->br(), $inputPassword, $sH->br(), $inputSubmit));
-    $sH->addChildren($inputForm);
-    $sH->render();
     
     
     

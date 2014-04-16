@@ -92,7 +92,7 @@
             return $string;
         }
         
-        public function addChildren($children) {
+        public function add($children) {
             if (!is_array($children)) {
                 $children = array($children);
             }
@@ -102,11 +102,23 @@
         protected function getChildElements() {
             return $this->childElements;
         }
+        
+        private function verifyChildObj($var) {
+            if (is_object($var)) {
+                return $var;
+            } elseif (is_string($var)) {
+                return new ElementText($var);
+            } else {
+                throw new Exception('Could not render non-object: '."\n\n".  var_dump($var));
+            }
+        }
 
         public function renderAll($sink, $tag, $single=FALSE) {
-            if ($tag != 'textarea') {
+            if (substr($tag, 0, 8) != 'textarea') {
                 $nL = "\n";
+                $closeTag = $tag;
             } else {
+                $closeTag = 'textarea';
                 $nL = '';
             }
             switch ($single) {
@@ -116,9 +128,10 @@
                 case FALSE:
                     $sink->addToBuffer('<'.$tag.  $this->getAttributesAsString().'>'.$nL);
                     foreach ($this->getChildElements() as $childElement) {
-                        $childElement->render($sink);
+                        $childObj = $this->verifyChildObj($childElement);
+                        $childObj->render($sink);
                     }
-                    $sink->addToBuffer('</'.$tag.'>'.$nL);
+                    $sink->addToBuffer('</'.$closeTag.'>'.$nL);
                     break;
             }
 

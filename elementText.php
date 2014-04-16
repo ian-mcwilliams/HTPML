@@ -4,10 +4,10 @@ class ElementText extends ElementHtml {
     private $children = array();
 
     public function ElementText($input) {
-        $this->addChildren($input);
+        $this->add($input);
     }
     
-    public function addChildren($children, $index=-1) {
+    public function add($children, $index=-1) {
         if ($index == -1) {
             if (!is_array($children)) {
                 $children = array($children);
