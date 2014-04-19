@@ -17,10 +17,10 @@
         }
         
         public function createChild($tag, $attrs=array()) {
-            $this->addChild($this->create($tag, $attrs));
+            $this->addChild($this->gE($tag, $attrs));
         }
         
-        public function create($tag, $attrs=NULL, $children=NULL) {
+        public function gE($tag, $attrs=NULL, $children=NULL) {
             if (is_string($attrs) && $tag != 'text') {
                 $attrs = $this->genAttrsArr($attrs);
             }
@@ -60,7 +60,7 @@
         }
         
         public function getBr() {
-            return $this->create('br');
+            return $this->gE('br');
         }
         
         public function addBr($param) {
