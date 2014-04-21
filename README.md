@@ -1,9 +1,11 @@
-HTPML
+<h1>HTPML</h1>
+
 
 Write HTML in your PHP code without messy yucky echo (retch!) commands.
 
-example:
+For example:
 
+...
 require_once '../HTPML.php';
 $hP = new HTPML();
 
@@ -16,37 +18,49 @@ $html = $hP->gen('html', NULL, array($head, $body));
 
 $hP->add($html);
 echo $hP->render();
+...
 
 OK, it was a lie - you still need _one_ echo!
 
+
+<h3>Structure</h3>
+
 Add elements as children to each other, program html from inside out:
 
-Build the elements required for the document head
-Build the head and attach the required elements
+<ul>
+<li>Build the elements required for the document head</li>
+<li>Build the head and attach the required elements</li>
 
-Build a method for the form;
-Build a div for the form to go in and append the form
-Build other divs etc as required
-Build the main document body and append the divs
+<li>Build a method for the form;</li>
+<li>Build a div for the form to go in and append the form</li>
+<li>Build other divs etc as required</li>
+<li>Build the main document body and append the divs</li>
 
-Build the html tag and append the head and body
+<li>Build the html tag and append the head and body</li>
+</ul>
 
 It's easier than learning your ABCs.
 
-Special cases:
+
+<h3>Special cases</h3>
 
 A variety of html elements don't fit in the normal flow:
 
-Text
+
+<h4>Text</h4>
 
 There's a special class for text, to address:
 
-Having text as a child of tags, the <p> and <b> tags for example
-Having a complex interaction between text and tags, eg <p>Here is some <b>bold</b> text!</p>
+Having text as a child of tags, the &lt;p&gt; and &lt;b&gt; tags for example
+
+Having a complex interaction between text and tags, eg &lt;p&gt;<p>Here is some &lt;b&gt;<b>bold</b>&lt;/b&gt; text!</p>&lt;/p&gt;
+
 
 Each text element is an array which accepts strings and tag objects
+
 As the tag objects can have their own children as normal, this can be used at any level as needed
 
-Comment
+
+<h4>Comment</h4>
 
 Comments are raised as tags and require a text object as a child to just pop in some text
