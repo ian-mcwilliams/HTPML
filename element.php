@@ -96,7 +96,28 @@
             if (!is_array($children)) {
                 $children = array($children);
             }
-            $this->childElements = array_merge($this->childElements, $children);
+            $flatChildrenArr = $this->flattenArrTree($children);
+            foreach ($flatChildrenArr as $child) {
+                $hP = new HTPML;
+                if (is_string($child)) {
+                    $element = $hP->gen('text', $child);
+                } else {
+                    $element = $child;
+                }
+                $this->childElements[] = $element;
+            }
+        }
+        
+        private function flattenArrTree($children) {
+            $thisArr = array();
+            if (is_array($children)) {
+                foreach ($children as $child) {
+                    $thisArr = array_merge($thisArr, $this->flattenArrTree($child));
+                }
+            } else {
+                $thisArr[] = $children;
+            }
+            return $thisArr;
         }
 
         protected function getChildElements() {

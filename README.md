@@ -73,3 +73,8 @@ As the tag objects can have their own children as normal, this can be used at an
 <h4>Comment</h4>
 
 Comments are raised as tags and require a text object as a child to just pop in some text
+
+Updates to this readme:
+Text no longer extra class, just create a 'text' element
+Can add text as a child just by passing the string, it will auto create the text element and append
+Can supply array, text or hP obj as one of child arr in third arg of gen - arr will be flattened recursively, text will become text hP obj

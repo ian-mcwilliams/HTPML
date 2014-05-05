@@ -18,7 +18,10 @@
             $this->addChild($this->gen($tag, $attrs));
         }
         
-        public function gen($tag, $attrs=array(), $children=NULL) {
+        public function gen($tag, $attrs=NULL, $children=NULL) {
+            if (is_null($attrs)) {
+                $attrs = array();
+            }
             if (is_string($attrs) && $tag != 'text') {
                 $attrs = $this->genAttrsArr($attrs);
             }
